@@ -137,3 +137,5 @@ Insights-
    then we can just remove course_name filter from 'WHERE' clause. */
 
 -- We can solve this problem using CTEs as well.
+
+SELECT * FROM courses;

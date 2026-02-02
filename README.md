@@ -14,15 +14,36 @@ The database consists of **three tables**:
 - **2 Fact Tables**
 - **1 Dimension Table**
 
+<p align="center">
+  <img src="Project Documentation/student_information_ERD_Database.png" width="45%" />
+  <img src="Project Documentation/students_information_ER_Diagram.png" width="45%" />
+</p>
+
+<p align="center">
+  <em>Left:</em> ERD generated from pgAdmin &nbsp; | &nbsp;
+  <em>Right:</em> Fact–Dimension relationship overview
+</p>
+
+
 ---
 
 ## Fact Tables
 
-### 1. jan_students
+### 1. jan_students 
 - Initially created in **Microsoft Excel**
 - Saved as a **CSV file**
+
+<p align="center">
+  <img src="Project Documentation\Creating CSV File Using EXCEL.png" width="82%" />
+</p>
+
 - A matching table structure was created in the SQL database
 - CSV data was imported into the SQL table
+
+<p align="center">
+  <img src="Project Documentation\Copying_CSV_File_Data.png" width="82%" />
+</p>
+
 - Contains a **foreign key (`course_id`)** referencing the `courses` table
 
 ### 2. feb_students
@@ -65,6 +86,10 @@ Both fact tables:
 - Since the `course_name` column is not present in either of the fact tables, the fact tables are joined with the dimension table using a `LEFT JOIN` on `course_id` to retrieve the course information.
 
 - The `course_name` obtained from the dimension table is then used in the `WHERE` clause to filter and include only **BCA students**.
+
+<p align="center">
+  <img src="Project Documentation\Top_Students_Answered.png" width="82%" />
+</p>
 
 ## Extras
 
