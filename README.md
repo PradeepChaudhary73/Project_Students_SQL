@@ -83,6 +83,12 @@ Both fact tables:
 
 - This total average is then used in the `WHERE` clause to filter students whose marks are **above the overall average**.
 
+**Note:** course column(which had the course name) was droped from both fact tables and a new column(course_id) with FOREIGN KEY was added in both tables to make it more complex. 
+
+<p align="center">
+  <img src="Project Documentation\Altering_tables_images.png" width="82%" />
+</p>
+
 - Since the `course_name` column is not present in either of the fact tables, the fact tables are joined with the dimension table using a `LEFT JOIN` on `course_id` to retrieve the course information.
 
 - The `course_name` obtained from the dimension table is then used in the `WHERE` clause to filter and include only **BCA students**.
